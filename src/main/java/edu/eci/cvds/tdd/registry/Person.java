@@ -27,6 +27,9 @@ public class Person {
     /**
      * The class' default constructor
      */
+
+    private boolean voted;
+
     public Person() {
         super();
     }
@@ -45,6 +48,7 @@ public class Person {
         this.age = age;
         this.gender = gender;
         this.alive = alive;
+        this.voted = false;
     }
     /**
      * Returns the person's name
@@ -84,6 +88,10 @@ public class Person {
     public boolean isAlive() {
         return alive;
     }
+
+    public boolean alreadyVoted() {
+        return voted;
+    }
     /**
      * Sets the person's name
      *
@@ -121,6 +129,14 @@ public class Person {
      */
     public void setAlive(boolean alive) {
         this.alive = alive;
+    }
+
+
+    /**
+     * Sets the status of the vote in true if the person has already voted
+     */
+    public void setVoted() {
+        this.voted = true;
     }
     /**
      * @{inheritdoc}
